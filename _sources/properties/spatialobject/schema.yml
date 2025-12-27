@@ -1,0 +1,11 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'GeoSPARQL Geometry'
+x-jsonld-context: ../../../geosparql.jsonld
+type: object
+allOf:
+ - $ref: bblocks://ogc.geosparql.properties.spatialobject-owa
+ - anyOf:
+   - required:
+     - hasResult
+   - required:
+     - hasSimpleResult
