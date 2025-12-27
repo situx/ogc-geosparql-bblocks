@@ -1,0 +1,10 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'GeoSPARQL Feature'
+x-jsonld-context: ../../../geosparql.jsonld
+type: object
+allOf:
+  - $ref:  bblocks://ogc.geo.json-fg.feature-lenient
+  - type: object
+    properties:
+      properties:
+        $ref: ../../properties/feature/schema.yaml

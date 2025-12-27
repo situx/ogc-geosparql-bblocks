@@ -1,0 +1,14 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'GeoSPARQL GeometryCollection'
+x-jsonld-context: ../../../geosparql.jsonld
+$defs:
+  collection:
+    type: object
+    properties:
+      member:
+        type: array
+        items:
+          anyOf:
+            - $ref: '#/$defs/collection'
+            - $ref: '../geometry/schema.yaml'
+            - $ref: bblocks://ogc.ogc-utils.iri-or-curie

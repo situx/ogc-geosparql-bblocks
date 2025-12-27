@@ -1,0 +1,18 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'GeoSPARQL GeometryCollection'
+x-jsonld-context: ../../../geosparql.jsonld
+allOf:
+  - $ref: bblocks://ogc.geo.json-fg.geometryCollection-lenient
+  - type: object
+    properties:
+      properties:
+        $ref: ../../properties/geometryCollection/schema.yaml
+      features:
+        # this is a rdfs:member - but specified as features to fit the GeoJSON schema
+        type: array
+        items:
+          oneOf:
+            # Embedded observations
+            - $ref: ../geometry/schema.yaml
+            # Ids/URIs
+            - type: string
