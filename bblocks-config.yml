@@ -1,4 +1,4 @@
-identifier-prefix: ogc.sosa.
+identifier-prefix: ogc.geosparql.
 
 name: GeoSPARQL
 abstract: Building blocks for implementation of OGC GeoSPARQL using the oGC GeoSPARQL ontology and query language
