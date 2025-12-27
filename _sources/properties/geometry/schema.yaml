@@ -2,10 +2,24 @@
 description: 'GeoSPARQL Geometry'
 x-jsonld-context: ../../../geosparql.jsonld
 type: object
-allOf:
- - $ref: bblocks://ogc.geosparql.properties.geometry-owa
- - anyOf:
-   - required:
-     - hasResult
-   - required:
-     - hasSimpleResult
+properties:
+  dimension:
+    type: number
+  coordinateDimension:
+    type: number
+  spatialDimension:
+    type: number
+  hasSpatialResolution:
+    type: object
+  hasMetricSpatialResolution:
+    type: number  
+  hasSpatialAccuracy:
+    type: object
+  hasMetricSpatialAccuracy:
+    type: number
+  isEmpty:
+    type: boolean
+  isSimple:
+    type: boolean
+  hasSerialization:
+    type: object
